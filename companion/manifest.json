@@ -1,0 +1,28 @@
+{
+  "$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+  "type": "connection",
+  "id": "presentation-commander-client",
+  "name": "presentation-commander-client",
+  "shortname": "Presentation Commander Client",
+  "description": "Control the Presentation Commander Client Node over OSC — slide navigation across PDF/Keynote/PowerPoint/Google Slides/Canva, black/white screen, notes, sections, laser pointer, wallpaper export, timed auto-advance, PowerPoint media control, and watched-folder file open.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "git+https://github.com/allansargeant/companion-module-presentation-commander-client.git",
+  "bugs": "https://github.com/allansargeant/companion-module-presentation-commander-client/issues",
+  "maintainers": [
+    {
+      "name": "Allan Sargeant",
+      "email": ""
+    }
+  ],
+  "runtime": {
+    "type": "node22",
+    "api": "nodejs-ipc",
+    "apiVersion": "0.0.0",
+    "entrypoint": "../src/main.js"
+  },
+  "legacyIds": [],
+  "manufacturer": "Presentation Commander",
+  "products": ["Presentation Commander Client"],
+  "keywords": ["presentation", "osc", "slides", "powerpoint", "keynote"]
+}
