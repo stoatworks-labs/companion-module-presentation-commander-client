@@ -83,6 +83,26 @@ a developer module:
    available in your version) — "Presentation Commander Client" appears
    as an installable connection module.
 
+## Inspiration & prior art
+
+- **[companion-module-zinc-oscpoint](https://github.com/bitfocus/companion-module-zinc-oscpoint)** —
+  the real, official, MIT-licensed Companion module for OSCPoint. Its
+  source (`main.js`/`config.js`/`actions.js`/`feedbacks.js`/`variables.js`/
+  `osc-listener.js`/`presets.js`) was read in full to learn what a real
+  Bitfocus Companion module actually looks like — the `InstanceBase`
+  lifecycle, config field shapes, `self.oscSend`, and how actions/
+  feedbacks/variables/presets get registered — before writing this module
+  from scratch. No lines of its code are reused here: every address
+  string, variable, and helper in this repo is written against
+  Presentation Commander Client's own (renamed, no-longer-OSCPoint-branded)
+  protocol, and file/function names differ throughout. It was a structural
+  reference for "how do you build a Companion module," not a source of
+  copied code.
+- **OSCPoint, benkuper/PowerPoint-OSC, leonreucher/powerpoint-remote-websocket,
+  and Iris Down Remote Show Control** — see
+  [presentation-commander-client's own README](https://github.com/allansargeant/presentation-commander-client#inspiration--prior-art)
+  for how these shaped the app whose protocol this module speaks.
+
 ## Project Setup
 
 ```bash
