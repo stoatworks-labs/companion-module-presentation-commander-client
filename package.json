@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allansargeant/companion-module-presentation-commander-client.git"
+    "url": "git+https://github.com/stoatworks-labs/companion-module-presentation-commander-client.git"
   },
   "engines": {
     "node": "^22.20"

@@ -6,7 +6,7 @@
 > it in production.
 
 A [Bitfocus Companion](https://bitfocus.io/companion) connection module for
-[presentation-commander-client](https://github.com/allansargeant/presentation-commander-client) —
+[presentation-commander-client](https://github.com/stoatworks-labs/presentation-commander-client) —
 control a running instance from a Stream Deck or any other Companion
 surface over its OSC control protocol, across every source type it
 supports: PDF, Keynote, PowerPoint, Google Slides, and Canva.
@@ -15,7 +15,7 @@ It talks directly to the app's own OSC listener (UDP, default port 35551)
 and receives feedback on a local port (default 35550) — no separate
 integration to install on the app side beyond turning OSC on in its
 titlebar. This is a sibling to
-[companion-module-presentationcommander-server](https://github.com/allansargeant/companion-module-presentationcommander-server),
+[companion-module-presentationcommander-server](https://github.com/stoatworks-labs/companion-module-presentationcommander-server),
 which controls the separate Master Server over its own HTTP automation API
 — this module is for the presentation laptop's Client Node instead.
 
@@ -100,7 +100,7 @@ a developer module:
   copied code.
 - **OSCPoint, benkuper/PowerPoint-OSC, leonreucher/powerpoint-remote-websocket,
   and Iris Down Remote Show Control** — see
-  [presentation-commander-client's own README](https://github.com/allansargeant/presentation-commander-client#inspiration--prior-art)
+  [presentation-commander-client's own README](https://github.com/stoatworks-labs/presentation-commander-client#inspiration--prior-art)
   for how these shaped the app whose protocol this module speaks.
 
 ## Project Setup
