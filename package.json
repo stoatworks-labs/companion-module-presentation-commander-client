@@ -22,5 +22,8 @@
   "devDependencies": {
     "@companion-module/tools": "^3.0.1",
     "prettier": "^3.8.3"
+  },
+  "overrides": {
+    "ws": "^8.21.0"
   }
 }
