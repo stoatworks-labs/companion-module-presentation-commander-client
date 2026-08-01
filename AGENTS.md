@@ -40,7 +40,7 @@ OSC on in its titlebar. So:
 |---|---|---|
 | **companion-module-presentation-commander-client** (this) | the presentation laptop's Client Node | OSC |
 | **companion-module-presentationcommander-server** | the Master Server (routing, scenes, notes) | HTTP automation API |
-| **companion-module-pdf-presenter-lite** | PDF Presenter Lite, a separate app | OSC |
+| **companion-module-pdf-presenter-lite** | PDF Presenter, a separate app | OSC |
 
 The **server** module is a different protocol entirely — don't carry assumptions across.
 
