@@ -110,3 +110,23 @@ npm install
 npm run format   # prettier
 npm run package  # builds a distributable module package
 ```
+
+## What changed in 1.1.0
+
+**Two bugs that made this module fail against `@companion-module/base` 2.x:**
+
+- `setVariableDefinitions` was being handed an **array**. Base 2.x throws
+  `Variable definitions should be an object, not an array` outright, which fails
+  `init()` and leaves the connection dead — no actions, no feedbacks, and no
+  obvious cause. It is now the object form the API requires.
+- `osc`'s `UDPPort.close()` takes **no callback**, so the
+  `new Promise((r) => port.close(r))` this used never settled. `destroy()` hung,
+  and `configUpdated()` never got past the close to reconnect — editing the host
+  or port killed the instance until Companion was restarted. It now awaits the
+  port's `close` event, with a timeout.
+
+**New: presets.** Ready-made button banks with their feedbacks and variables
+already wired.
+
+**New: `npm test`** — a regression harness that drives the real source against a
+fake app on a real UDP socket, and covers all three of the above.

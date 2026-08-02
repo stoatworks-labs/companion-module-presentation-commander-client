@@ -36,11 +36,11 @@ OSC on in its titlebar. So:
 
 ## 3. Know which of the three surfaces you are in
 
-| Repo | Controls | Transport |
-|---|---|---|
-| **companion-module-presentation-commander-client** (this) | the presentation laptop's Client Node | OSC |
-| **companion-module-presentationcommander-server** | the Master Server (routing, scenes, notes) | HTTP automation API |
-| **companion-module-pdf-presenter-lite** | PDF Presenter, a separate app | OSC |
+| Repo                                                      | Controls                                   | Transport           |
+| --------------------------------------------------------- | ------------------------------------------ | ------------------- |
+| **companion-module-presentation-commander-client** (this) | the presentation laptop's Client Node      | OSC                 |
+| **companion-module-presentationcommander-server**         | the Master Server (routing, scenes, notes) | HTTP automation API |
+| **companion-module-pdf-presenter-lite**                   | PDF Presenter, a separate app              | OSC                 |
 
 The **server** module is a different protocol entirely — don't carry assumptions across.
 
@@ -52,16 +52,16 @@ sitting.
 
 ## 4. Layout
 
-| File | Role |
-|---|---|
-| `src/main.js` | `InstanceBase` lifecycle, config fields, wiring |
-| `src/actions.js` | The buttons — the bulk of the module |
-| `src/feedbacks.js` | Button lighting: slideshow state, OSC file access enabled |
-| `src/variables.js` | Text/state exposed to Companion expressions |
-| `src/osc.js` | Send/receive, port handling, inbound address parsing |
-| `src/choices.js` | Dropdown option lists |
-| `src/upgrades.js` | Companion config migrations (currently a stub) |
-| `companion/manifest.json` | Module id, version, runtime declaration |
+| File                      | Role                                                      |
+| ------------------------- | --------------------------------------------------------- |
+| `src/main.js`             | `InstanceBase` lifecycle, config fields, wiring           |
+| `src/actions.js`          | The buttons — the bulk of the module                      |
+| `src/feedbacks.js`        | Button lighting: slideshow state, OSC file access enabled |
+| `src/variables.js`        | Text/state exposed to Companion expressions               |
+| `src/osc.js`              | Send/receive, port handling, inbound address parsing      |
+| `src/choices.js`          | Dropdown option lists                                     |
+| `src/upgrades.js`         | Companion config migrations (currently a stub)            |
+| `companion/manifest.json` | Module id, version, runtime declaration                   |
 
 ## 5. Deliberate omissions — do not "fix" these
 

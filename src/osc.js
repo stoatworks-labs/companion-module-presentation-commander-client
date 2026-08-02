@@ -187,11 +187,36 @@ const oscListener = {
     });
   },
 
+  /**
+   * Close the listen socket.
+   *
+   * osc's UDPPort.close() takes NO callback — it just calls socket.close()
+   * (node_modules/osc/src/platforms/osc-node.js). The obvious-looking
+   * `new Promise((r) => port.close(r))` therefore never settles: destroy()
+   * never finishes, and configUpdated() never gets past the close to reconnect,
+   * so editing the host or port kills the instance until Companion restarts.
+   *
+   * The port does emit "close", so that is what to await — with a timeout,
+   * because a socket that never opened emits nothing and a module that cannot
+   * be destroyed is worse than one that leaks a UDP port.
+   */
   async close() {
-    if (this.udpPort) {
-      await new Promise((resolve) => this.udpPort.close(resolve));
-      this.udpPort = null;
-    }
+    const port = this.udpPort;
+    if (!port) return;
+    this.udpPort = null;
+    await new Promise((resolve) => {
+      const done = () => {
+        clearTimeout(timer);
+        resolve();
+      };
+      const timer = setTimeout(done, 1000);
+      port.once("close", done);
+      try {
+        port.close();
+      } catch {
+        done();
+      }
+    });
   },
 };
 
