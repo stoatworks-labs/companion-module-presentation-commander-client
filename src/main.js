@@ -5,6 +5,7 @@ import UpdateFeedbacks from "./feedbacks.js";
 import UpdateVariableDefinitions from "./variables.js";
 import UpdatePresets from "./presets.js";
 import oscListener from "./osc.js";
+import { aboutField } from './about-field.js'
 
 function defaultState() {
   return {
@@ -106,6 +107,10 @@ export default class ModuleInstance extends InstanceBase {
         regex: Regex.PORT,
         default: "35550",
       },
+    
+    	// Vendored from stoatworks-backend/about. A Companion module has no
+    	// UI of its own, so this config panel is the only surface it has.
+    	aboutField(),
     ];
   }
 
