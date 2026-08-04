@@ -130,3 +130,7 @@ already wired.
 
 **New: `npm test`** — a regression harness that drives the real source against a
 fake app on a real UDP socket, and covers all three of the above.
+
+<!-- attributions:start -->
+This project is built on other people's work — see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
+<!-- attributions:end -->
