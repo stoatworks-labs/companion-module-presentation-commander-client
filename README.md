@@ -19,6 +19,21 @@ titlebar. This is a sibling to
 which controls the separate Master Server over its own HTTP automation API
 — this module is for the presentation laptop's Client Node instead.
 
+<!-- downloads:start -->
+
+## Download
+
+**[v1.1.0](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/tag/v1.1.0)**
+
+This release contains:
+
+- [`companion-module-presentation-commander-client-pkg.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/latest/download/companion-module-presentation-commander-client-pkg.tgz) — npm package, 48 KB
+- [`presentation-commander-client-1.1.0.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/download/v1.1.0/presentation-commander-client-1.1.0.tgz) — npm package, 48 KB
+
+All builds, checksums and release notes: [github.com/stoatworks-labs/companion-module-presentation-commander-client/releases](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases).
+
+<!-- downloads:end -->
+
 ## What it does
 
 - **Actions** — Next/Previous slide, go to slide number, go to first/last
