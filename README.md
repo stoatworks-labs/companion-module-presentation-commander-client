@@ -23,12 +23,12 @@ which controls the separate Master Server over its own HTTP automation API
 
 ## Download
 
-**[v1.1.0](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/tag/v1.1.0)**
+**[v1.1.1](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/tag/v1.1.1)**
 
 This release contains:
 
-- [`companion-module-presentation-commander-client-pkg.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/latest/download/companion-module-presentation-commander-client-pkg.tgz) — npm package, 48 KB
-- [`presentation-commander-client-1.1.0.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/download/v1.1.0/presentation-commander-client-1.1.0.tgz) — npm package, 48 KB
+- [`companion-module-presentation-commander-client-pkg.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/latest/download/companion-module-presentation-commander-client-pkg.tgz) — npm package, 49 KB
+- [`presentation-commander-client-1.1.1.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/download/v1.1.1/presentation-commander-client-1.1.1.tgz) — npm package, 49 KB
 
 All builds, checksums and release notes: [github.com/stoatworks-labs/companion-module-presentation-commander-client/releases](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases).
 
