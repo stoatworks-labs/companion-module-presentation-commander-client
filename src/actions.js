@@ -22,6 +22,11 @@ function slideNumberOption(defaultValue = 1) {
   };
 }
 
+/** Options declared `useVariables: true` arrive already expanded: Companion
+ *  resolves them before invoking the callback, so they are read straight off
+ *  `event.options`. `parseVariablesInField` does not exist in base 2.x — nor
+ *  does `parseVariablesInString` — and calling either throws when the action
+ *  fires, while the module still loads and every other action works. */
 export default function UpdateActions(self) {
   const sections = sectionChoices(self);
   const files = fileChoices(self);
@@ -41,10 +46,7 @@ export default function UpdateActions(self) {
       name: "Go to slide number",
       options: [slideNumberOption()],
       callback: async (event) => {
-        const n = parseInt(
-          await self.parseVariablesInField(String(event.options.slideNumber)),
-          10,
-        );
+        const n = parseInt(String(event.options.slideNumber), 10);
         if (!isNaN(n)) send(self, "/goto/slide", [{ type: "i", value: n }]);
       },
     },
@@ -72,9 +74,7 @@ export default function UpdateActions(self) {
         },
       ],
       callback: async (event) => {
-        const name = await self.parseVariablesInField(
-          String(event.options.sectionName),
-        );
+        const name = String(event.options.sectionName);
         send(self, "/goto/section", [{ type: "s", value: name }]);
       },
     },
@@ -216,9 +216,7 @@ export default function UpdateActions(self) {
         },
       ],
       callback: async (event) => {
-        const path = await self.parseVariablesInField(
-          String(event.options.relativePath),
-        );
+        const path = String(event.options.relativePath);
         send(self, "/files/setpath", [{ type: "s", value: path }]);
       },
     },
@@ -241,9 +239,7 @@ export default function UpdateActions(self) {
         },
       ],
       callback: async (event) => {
-        const filename = await self.parseVariablesInField(
-          String(event.options.filename),
-        );
+        const filename = String(event.options.filename);
         send(self, "/files/open", [{ type: "s", value: filename }]);
       },
     },
