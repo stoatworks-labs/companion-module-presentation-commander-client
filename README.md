@@ -23,12 +23,12 @@ which controls the separate Master Server over its own HTTP automation API
 
 ## Download
 
-**[v1.1.2](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/tag/v1.1.2)**
+**[v1.1.3](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/tag/v1.1.3)**
 
 This release contains:
 
 - [`companion-module-presentation-commander-client-pkg.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/latest/download/companion-module-presentation-commander-client-pkg.tgz) — npm package, 54 KB
-- [`presentation-commander-client-1.1.2.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/download/v1.1.2/presentation-commander-client-1.1.2.tgz) — npm package, 54 KB
+- [`presentation-commander-client-1.1.3.tgz`](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases/download/v1.1.3/presentation-commander-client-1.1.3.tgz) — npm package, 54 KB
 
 All builds, checksums and release notes: [github.com/stoatworks-labs/companion-module-presentation-commander-client/releases](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases).
 
