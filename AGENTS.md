@@ -12,7 +12,7 @@ the app that runs on the presentation laptop. It lets a running instance be driv
 **Stream Deck** (or any other Companion surface) across every source type the app supports:
 **PDF, Keynote, PowerPoint, Google Slides and Canva**.
 
-JavaScript, Node 22 runtime, `nodejs-ipc` API. Small repo — 15 tracked files, ~730 lines
+JavaScript, Node 22 runtime, `nodejs-ipc` API. Small repo — 31 tracked files, ~1,300 lines
 across `src/`.
 
 ## 2. It talks OSC directly to the app — there is no middleware
@@ -45,8 +45,8 @@ OSC on in its titlebar. So:
 The **server** module is a different protocol entirely — don't carry assumptions across.
 
 The **pdf-presenter-lite** module is a near-identical sibling of this one: same file layout,
-same ports, same defaults. This module is the superset — it adds PowerPoint media transport
-and Program Out on top. **Treat "the same bug probably exists in the sibling" as the default
+same ports, same defaults. This module adds PowerPoint media transport and Program Out; the
+PDF Presenter module has slide transitions, which this one doesn't. **Treat "the same bug probably exists in the sibling" as the default
 assumption**; a fix to `osc.js` or `variables.js` here is worth checking there in the same
 sitting.
 

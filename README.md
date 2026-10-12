@@ -84,10 +84,12 @@ What I've left out on purpose:
    OSC settings panel points back at the Companion machine's IP (not
    `127.0.0.1`).
 
-## Installing (Developer Modules Path)
+## Installing
 
-This module isn't in the official Companion module store, so install it as
-a developer module:
+This module isn't in the official Companion module store. The quick way is to
+download `companion-module-presentation-commander-client-pkg.tgz` from the
+[releases page](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases) and import it with Companion's
+**Modules → Import module package**. Or install it as a developer module:
 
 1. Clone this repo, then `npm install`.
 2. In Companion, go to **Settings → Developer modules path** and point it

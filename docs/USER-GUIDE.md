@@ -19,7 +19,10 @@ supports: PDF, Keynote, PowerPoint, Google Slides and Canva.
 
 ## Setting it up
 
-**1. Install the module.** It isn't in the official store, so you have to point Companion at it:
+**1. Install the module.** It isn't in the official store. The quick way is to download
+`companion-module-presentation-commander-client-pkg.tgz` from the [releases page](https://github.com/stoatworks-labs/companion-module-presentation-commander-client/releases) and
+import it with Companion's **Modules → Import module package**. Or point Companion at a checkout
+as a developer module:
 
 ```bash
 git clone https://github.com/stoatworks-labs/companion-module-presentation-commander-client
