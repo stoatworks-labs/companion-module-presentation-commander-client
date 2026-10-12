@@ -123,7 +123,44 @@ npm run format   # prettier
 npm run package  # builds a distributable module package
 ```
 
-## What changed in 1.1.0
+## What changed
+
+### 1.1.3
+
+**Installed from the release package, the module crashed on load.** Companion showed
+_Connection is not running_, kept restarting it, and the log said
+`Cannot find module '../package.json'`. The About block at the bottom of the
+connection's config panel read `package.json` relative to its own source file,
+which is fine in a checkout and wrong once the module's bundled for release.
+Every packaged release since the About block arrived had it; a checkout on the
+developer modules path didn't, which is how it went unnoticed. The About block
+now finds what it needs either way and can't stop the module loading.
+
+### 1.1.2
+
+**Four actions threw an error the moment they fired:** _Go to slide number_,
+_Go to first slide of section_, _Set watched folder_ and _Open file from watched
+folder_. They called `parseVariablesInField`, which `@companion-module/base` 2.x
+doesn't have, while the module loaded and tracked state as normal. Companion
+fills in those fields' variables before the action runs anyway, so the call's
+gone.
+
+Also in this release: `@companion-module/base` 2.1.3 and `@companion-module/tools` 3.1.0.
+
+### 1.1.1
+
+Packaging only; the module's code didn't change.
+
+- **The release package couldn't be installed.**
+  `companion-module-presentation-commander-client-pkg.tgz` was made by
+  re-tarring the build tool's staging folder, which put `package.json` one
+  folder down from where Companion looks. It's now a copy of the archive
+  `companion-module-build` makes, and both archives are checked for
+  `package.json` and `companion/manifest.json` at their root before a release
+  goes out.
+- **The help button has a page behind it**: the module ships `companion/HELP.md`.
+
+### 1.1.0
 
 **Two bugs that made this module fail against `@companion-module/base` 2.x:**
 
@@ -141,7 +178,7 @@ npm run package  # builds a distributable module package
 already wired up.
 
 **New: `npm test`**, a regression harness that runs the module's actual code
-against a pretend app on a real UDP socket, and covers all three of the above.
+against a pretend app on a real UDP socket, and covers both bugs and the presets.
 
 <!-- attributions:start -->
 This project is built on other people's work — see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
