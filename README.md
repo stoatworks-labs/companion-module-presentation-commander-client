@@ -10,6 +10,8 @@ so you can run the app from a Stream Deck (or any other Companion surface) over
 its OSC control protocol, whatever kind of source it's showing: PDF, Keynote,
 PowerPoint, Google Slides or Canva.
 
+The [project page](https://stoatworks-labs.com/software/companion-presentation-commander-client/) has the downloads and the [user guide](https://stoatworks-labs.com/software/companion-presentation-commander-client/guide/).
+
 It talks straight to the app's own OSC listener (UDP, port 35551 by default)
 and listens for feedback on a local port (35550 by default). There's nothing
 extra to install on the app end: you turn OSC on in its titlebar, and that's it.
