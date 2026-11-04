@@ -60,7 +60,7 @@ sitting.
 | `src/variables.js`        | Text/state exposed to Companion expressions               |
 | `src/osc.js`              | Send/receive, port handling, inbound address parsing      |
 | `src/choices.js`          | Dropdown option lists                                     |
-| `src/upgrades.js`         | Companion config migrations (currently a stub)            |
+| `src/upgrades.js`         | Companion config migrations (string ports to numbers)     |
 | `companion/manifest.json` | Module id, version, runtime declaration                   |
 
 ## 5. Deliberate omissions — do not "fix" these

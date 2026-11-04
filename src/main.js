@@ -1,4 +1,4 @@
-import { InstanceBase, Regex, InstanceStatus } from "@companion-module/base";
+import { InstanceBase, InstanceStatus } from "@companion-module/base";
 import { UpgradeScripts } from "./upgrades.js";
 import UpdateActions from "./actions.js";
 import UpdateFeedbacks from "./feedbacks.js";
@@ -83,29 +83,36 @@ export default class ModuleInstance extends InstanceBase {
         value:
           "The Presentation Commander Client's own OSC settings panel shows its listen/feedback ports — match them here. Defaults line up with the app's own defaults.",
       },
+      // Plain text and number fields rather than Regex.IP / Regex.PORT, which
+      // base 2.2.2 deprecated. Saved string ports are converted in upgrades.js.
       {
         type: "textinput",
         id: "remotehost",
         label: "App host",
+        tooltip: "IPv4 address or hostname of the presentation laptop",
         width: 6,
-        regex: Regex.IP,
+        minLength: 1,
         default: "127.0.0.1",
       },
       {
-        type: "textinput",
+        type: "number",
         id: "remoteport",
         label: "App listen port",
         width: 6,
-        regex: Regex.PORT,
-        default: "35551",
+        min: 1,
+        max: 65535,
+        asInteger: true,
+        default: 35551,
       },
       {
-        type: "textinput",
+        type: "number",
         id: "localport",
         label: "Local feedback port",
         width: 6,
-        regex: Regex.PORT,
-        default: "35550",
+        min: 1,
+        max: 65535,
+        asInteger: true,
+        default: 35550,
       },
 
       // Vendored from stoatworks-backend/about. A Companion module has no
